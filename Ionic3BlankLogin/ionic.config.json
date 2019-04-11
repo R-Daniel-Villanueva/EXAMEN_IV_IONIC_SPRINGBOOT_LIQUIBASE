@@ -1,0 +1,7 @@
+{
+  "name": "HelloWord",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

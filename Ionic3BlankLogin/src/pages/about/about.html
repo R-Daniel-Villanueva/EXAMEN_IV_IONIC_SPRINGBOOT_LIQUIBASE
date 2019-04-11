@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-navbar>
+      <ion-title>{{user | mypipe}}</ion-title>
+      <!--<ion-title>{{user | mypipe:'Campo Vacio'}} - {{data.group}}</ion-title>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <!--
+    <h5>Fecha: {{data.date | date:"mm dd yyyy"}}</h5>
+    <h5>Costo: {{data.cost|currency:'MXN'}}</h5>
+    <h5>Costo: {{data.cost|currency:'EU'}}</h5>
+    <h5>Costo: {{data.cost|percent}}</h5>
+    <h5>Costo: {{data.cost|number:'3.5'}}</h5>
+    -->
+    <!--
+    <ion-item>
+        <ion-label>CURSOS</ion-label>
+
+        <ion-select>
+          <ion-option *ngFor="let cursos of data.courses; let i= index">{{cursos}}-{{i}}</ion-option>
+        </ion-select>
+      </ion-item>
+    -->
+
+
+    <!--
+          <button ion-button (click)="goBack()" round small>Regresar</button>
+          <button ion-button (click)="costumer()" round small>Costumer</button>
+          
+
+          <ion-item *ngFor="let cursos of data.courses; let i= index">
+              <ion-label [color]="(i%2)===0 ? 'primary':'danger'">{{cursos}}</ion-label>
+          </ion-item>
+    -->
+    <div class="wrapper">
+        <div 
+          class="wrapper-info" 
+          *ngFor="let cursos of data.courses | slice:0:3; let i =index;"
+          [ngClass]="{
+            'course-one':i===0,
+            'course-two':i===1,
+            'course-three':i===2}">
+              <h5>Curso: {{cursos}}</h5>
+              <h5>Nombre: {{user}}</h5>
+              <h5>Date: {{data.date|date:"dd MM yyyy"}}</h5>
+              <h5>Precio: {{data.cost |currency:'MXN'}}</h5>
+
+        </div>
+    </div>
+</ion-content>

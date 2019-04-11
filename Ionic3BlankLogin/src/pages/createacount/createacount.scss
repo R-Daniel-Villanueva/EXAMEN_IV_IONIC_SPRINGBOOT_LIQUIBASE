@@ -1,0 +1,11 @@
+page-createacount {
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        /*background-color: color($colors,curso);*/
+    }
+    .nav{
+        display:flex;
+        justify-content:space-around;
+    }
+}

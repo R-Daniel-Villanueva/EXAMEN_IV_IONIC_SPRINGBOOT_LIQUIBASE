@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      ORIGIN
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Inicio de sesion</h1>
+  <!--
+  <div class="nav">
+    <button ion-button  round small>About</button>
+    <button ion-button icon-only round small>
+      <ion-icon name="home" ></ion-icon>
+    </button>
+    <button ion-button  round small>Cerrar</button>
+  </div>
+  -->
+  <!--
+  <div class="wrap">
+      <ion-item>
+          <ion-label floating >Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >Grupo</ion-label>
+          <ion-input type="text" [(ngModel)]="group"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >Costo</ion-label>
+          <ion-input type="number" [(ngModel)]="cost"></ion-input>
+      </ion-item>
+      
+    <button ion-button (click)="goAbout()" round small>Guardar</button>
+
+    <h4>Usuario: {{user}}    </h4>
+    <h4>Grupo: {{group}}    </h4>
+</div>
+-->
+<form class="wrapper"[formGroup]="loginForm">
+    <ion-item>
+        <ion-label floating >Usuario</ion-label>
+        <ion-input type="text" formControlName="user"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating >Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    
+    <button ion-button [color]="loginForm.valid ? 'primary':'danger'"
+    (click)="login()" [disabled]="!loginForm.valid" round small>LOGIN</button>
+
+    <button ion-button round (click)="gocreate()" clear small>Registrar usuarios</button>
+    <!--<button ion-button round (click)="goregistros()" clear small>Ver Registros</button>-->
+  </form>
+
+</ion-content>

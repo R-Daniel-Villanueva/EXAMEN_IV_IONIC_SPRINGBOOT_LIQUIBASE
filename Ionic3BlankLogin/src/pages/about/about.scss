@@ -1,0 +1,42 @@
+page-about {
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+    }
+    .wrapper-info{
+        display:flex;
+        margin: 20px;
+        height:150px;
+        flex-direction: row;
+    }
+    .course-one{
+
+        border-radius:5px;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-left-color:color($colors,"danger");
+        background-color: color($colors,"primary");
+        color:white;
+        padding: 5px;
+    }
+    .course-two{
+        border-radius:5px;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-left-color:color($colors,"danger");
+        background-color: green;
+        color:white;
+        padding: 5px;
+        
+    }
+    .course-three{
+        border-radius:5px;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-left-color:color($colors,"danger");
+        background-color: red;
+        color:white;
+        padding: 5px;
+        
+    }
+}
